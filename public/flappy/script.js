@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const bird = document.querySelector('.bird')
     const gameDisplay = document.querySelector('.container')
-    const ground = document.querySelector('.ground')
+    const ground = document.querySelector('.ground-moving')
 
     let birdLeft = 220
     let birdBottom = 100
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             birdBottom += 50
         }
         bird.style.bottom = birdBottom + 'px'
+        console.log(birdBottom)
     }
 
     document.addEventListener('keyup', control)
@@ -53,15 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
             obstacleLeft -= 2
             obstacle.style.left = obstacleLeft + 'px'
             topObstacle.style.left = obstacleLeft + 'px'
-            if(obstacleLeft == -60) {
+            if(obstacleLeft === -60) {
                 clearInterval(timerId)
                 gameDisplay.removeChild(obstacle)
                 gameDisplay.removeChild(topObstacle)
             }
 
-            if(obstacleLeft > 200 && obstacleLeft < 280 && birdLeft == 220 && 
+            if(obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 && 
                 (birdBottom < obstacleBottom + 153 || birdBottom > obstacleBottom + gap - 200) ||
-                birdBottom == 0) {
+                birdBottom === 0) {
                 gameOver()
                 clearInterval(timerId)
             }
@@ -78,5 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isGameOver = true
         console.log('game over')
         document.removeEventListener('keyup', control)
+        ground.classList.add('ground')
+        ground.classList.remove('ground-moving')
     }
 })
