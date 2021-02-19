@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ground = document.querySelector('.ground-moving')
 
     let birdLeft = 220
-    let birdBottom = 0
+    let birdBottom = 100
     let gravity = 3
     let isGameOver = false
     let gap = 430
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameTimerId = setInterval(startGame, 20)
 
     function control(e) {
-        if(e.keyCode === 38) {
+        if(e.keyCode === 32) {
             jump()
         }
     }
