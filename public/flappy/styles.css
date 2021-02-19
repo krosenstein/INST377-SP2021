@@ -108,6 +108,6 @@ body {
     background-repeat: repeat-x;
     animation: slideright 100s infinite linear;
     -webkit-animation: slideright 100s infinite linear;
-    width: 100px;
+    width: 100%;
     z-index: +1;
 }
