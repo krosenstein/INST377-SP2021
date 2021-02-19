@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ground = document.querySelector('.ground-moving')
 
     let birdLeft = 220
-    let birdBottom = 100
+    let birdBottom = 0
     let gravity = 3
     let isGameOver = false
     let gap = 430
