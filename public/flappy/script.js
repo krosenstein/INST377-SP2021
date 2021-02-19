@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const topObstacle = document.createElement('div')
         if (!isGameOver) {
             obstacle.classList.add('obstacle')
-            topO bstacle.classList.add('topObstacle')
+            topObstacle.classList.add('topObstacle')
         }
         gameDisplay.appendChild(obstacle)
         gameDisplay.appendChild(topObstacle)
