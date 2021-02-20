@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kyle Rosenstein's Lab 4</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Kyle Rosenstein's Lab 4</h1>
+        <form action="/api" method="post">
+            <ul class="flex-outer">
+                <li>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="Enter your first name here">
+                </li>
+            </br>
+                <li>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Enter your last name here">
+                </li>
+            </br>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your email here">
+                </li>
+            </br>
+                <li>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone here">
+                </li>
+            </br>
+                <li>
+                    <label for="message">Message</label>
+                    <textarea rows="10" id="message" placeholder="Enter your message here"></textarea>
+                </li>
+            </br>
+                <li>
+                    <p>Age</p>
+                    <ul class="flex-inner">
+                        <li>
+                            <input type="checkbox" id="first-box">
+                            <label for="first-box">18-35</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="second-box">
+                            <label for="second-box">35-50</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="third-box">
+                            <label for="third-box">50-65</label>
+                        </li>
+                    </ul>
+                </li>
+            </br>
+                <li>
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>
